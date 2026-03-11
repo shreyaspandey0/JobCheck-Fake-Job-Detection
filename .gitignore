@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+nlp_venv/
+venv/
+ENV/
+
+# VS Code
+.vscode/
+
+# Database
+jobcheck.db
+
+# Large Models (Optional - comment out if you want to upload them, but GitHub has 100MB limit)
+# milestone2_models/random_forest.pkl
+
+# Datasets (Optional - comment out if you want to upload)
+# fake_job_postings.csv
+
+# Models
+# DL models might be large
+*.h5
+*.pkl
+
+# Environment and Logs
+.env
+logs/
+*.pyc
