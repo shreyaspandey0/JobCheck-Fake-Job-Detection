@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import joblib
 import os
@@ -37,6 +38,12 @@ class FlagRequest(BaseModel):
 class LoginRequest(BaseModel):
     username: str
     password: str
+
+@app.get("/admin")
+def admin_page():
+    """Serve the admin dashboard."""
+    return FileResponse(os.path.join(BASE_DIR, "frontend", "admin.html"))
+
 @app.post("/login")
 def login(data: LoginRequest):
     """Simple Admin Login."""
